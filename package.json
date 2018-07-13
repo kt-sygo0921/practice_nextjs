@@ -1,0 +1,19 @@
+{
+  "name": "practice_nextjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://kt-sygo0921@github.com/kt-sygo0921/practice_nextjs.git",
+  "author": "kato-syogo",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next -p 8888",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "styled-components": "^3.3.3"
+  }
+}
