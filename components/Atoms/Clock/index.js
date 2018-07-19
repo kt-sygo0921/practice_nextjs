@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 const pad = n => n < 10 ? `0${n}`:n

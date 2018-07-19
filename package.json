@@ -8,9 +8,12 @@
   "scripts": {
     "dev": "next -p 8888",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-info": "^3.4.8",
     "next": "^6.1.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -19,5 +22,13 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-saga": "^0.16.0",
     "styled-components": "^3.3.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0"
   }
 }

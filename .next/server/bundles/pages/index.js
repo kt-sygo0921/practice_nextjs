@@ -127,9 +127,8 @@ var _jsxFileName = "/Users/kato-syogo/Desktop/git/Private/practice_nextjs/compon
 
 var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n    padding: 15px;\n    display: inline-block;\n    color: #82FA58;\n    font: 50px menlo, monaco, monospace;\n    background-color: #000;\n    &.light {\n        background-color:#999;\n    }\n"]);
 
-
-
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -149,7 +148,7 @@ var ClockWapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(
     className: light ? 'light' : '',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     }
   }, format(new Date(lastUpdate)));
 });

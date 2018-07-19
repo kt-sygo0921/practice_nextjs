@@ -273,7 +273,7 @@ function (_App) {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/_app")
   
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -338,4 +338,4 @@ function requestSaga() {
 /***/ })
 
 })
-//# sourceMappingURL=1.2610a96aa1b78acf4f26.hot-update.js.map
+//# sourceMappingURL=1.c4111c1c8c7f6484d41c.hot-update.js.map
