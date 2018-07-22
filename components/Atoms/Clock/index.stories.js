@@ -9,4 +9,4 @@ storiesOf('Clock', module)
             light: ''
         }
         return <Clock {...props}/>
-    })
+    },{notes: 'Simple Clock Component'});
