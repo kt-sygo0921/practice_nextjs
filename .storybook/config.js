@@ -1,7 +1,9 @@
+import React from 'react';
 import { configure, setAddon, addDecorator } from '@storybook/react';
 import { withNotes } from '@storybook/addon-notes';
+import Container from './Container';
 
-addDecorator();
+addDecorator(story => <Container story={story}/>);
 setAddon(withNotes);
 
 // automatically import all files ending in *.stories.js

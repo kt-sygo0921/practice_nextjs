@@ -13,8 +13,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0-beta.54",
+    "@babel/preset-stage-1": "^7.0.0-beta.54",
     "@storybook/addon-info": "^3.4.8",
     "@storybook/addon-notes": "^3.4.8",
+    "@storybook/react": "4.0.0-alpha.14",
     "next": "^6.1.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -28,8 +33,19 @@
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-links": "^3.4.8",
     "@storybook/addons": "^3.4.8",
-    "@storybook/react": "^3.4.8",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0"
+  },
+  "babel": {
+    "presets": [
+      "./scripts/env",
+      "@babel/preset-react",
+      [
+        "@babel/preset-stage-1",
+        {
+          "decoratorsLegacy": true
+        }
+      ]
+    ]
   }
 }
