@@ -129,6 +129,15 @@ var actionTypes = {
 
 /***/ }),
 
+/***/ "./lib/reset-css.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var resetStyle = "\n    body {\n        background: #fff;\n    }\n";
+/* harmony default export */ __webpack_exports__["a"] = (resetStyle);
+
+/***/ }),
+
 /***/ "./lib/with-redux-store.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -273,7 +282,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__("react-redux");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__lib_with_redux_store__ = __webpack_require__("./lib/with-redux-store.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_styled_components__ = __webpack_require__("styled-components");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_styled_components__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__lib_reset_css__ = __webpack_require__("./lib/reset-css.js");
 var _jsxFileName = "/Users/kato-syogo/Desktop/git/Private/practice_nextjs/pages/_app.js";
+
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n    ", "\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -291,10 +305,15 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
 
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_4_styled_components__["injectGlobal"])(_templateObject, __WEBPACK_IMPORTED_MODULE_5__lib_reset_css__["a" /* default */]);
 
 var MyApp =
 /*#__PURE__*/
@@ -317,18 +336,18 @@ function (_App) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_next_app__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 17
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_redux__["Provider"], {
         store: reduxStore,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 18
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 19
         }
       }))));
     }
@@ -552,6 +571,13 @@ module.exports = require("redux-saga");
 /***/ (function(module, exports) {
 
 module.exports = require("redux-saga/effects");
+
+/***/ }),
+
+/***/ "styled-components":
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

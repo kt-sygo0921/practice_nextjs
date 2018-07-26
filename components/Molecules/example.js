@@ -1,13 +1,17 @@
 import {connect} from 'react-redux';
 import Clock from '../Atoms/Clock';
 import Counter from '../Atoms/Counter';
+import styled from 'styled-components';
+
+const MoleculesWrapper = styled.div`
+`
 
 function Examples ( {lastUpdate, light}) {
     return (
-        <div>
-            <Clock lastUpdate={lastUpdate} light={light} />
+        <MoleculesWrapper>
+            <Clock lastUpdate={lastUpdate} light={light}/>
             <Counter />
-        </div>
+        </MoleculesWrapper>
     )
 }
 

@@ -53,11 +53,20 @@ function resetCount() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants_color__ = __webpack_require__("./constants/color.js");
 var _jsxFileName = "/Users/kato-syogo/Desktop/git/Private/practice_nextjs/components/Atoms/Clock/index.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n    padding: 15px;\n    display: inline-block;\n    color: #82FA58;\n    font: 50px menlo, monaco, monospace;\n    background-color: #000;\n    &.light {\n        background-color:#999;\n    }\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n    display: inline-block;\n    color: #82FA58;\n    font-family: menlo, monaco, monospace;\n    background-color: ", ";\n    &.light {\n        background-color:#999;\n    }\n        ", "\n"]),
+    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n                    font-size: 25px;\n                    padding: 10px;\n                "]),
+    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n                    font-size: 35px;\n                    padding: 12px;\n                "]),
+    _templateObject4 = /*#__PURE__*/ _taggedTemplateLiteral(["\n                    font-size: 50px;\n                    padding: 15px;\n                "]);
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -70,17 +79,33 @@ var format = function format(t) {
   return "".concat(pad(t.getUTCHours()), ":").concat(pad(t.getUTCMinutes()), ":").concat(pad(t.getUTCSeconds()));
 };
 
-var ClockWapper = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject);
-/* harmony default export */ __webpack_exports__["a"] = (function (_ref) {
-  var lastUpdate = _ref.lastUpdate,
-      light = _ref.light;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ClockWapper, {
-    className: light ? 'light' : '',
+var ClockWapper = __WEBPACK_IMPORTED_MODULE_1_styled_components__["c" /* default */].div(_templateObject, __WEBPACK_IMPORTED_MODULE_2__constants_color__["a" /* default */].black, function (_ref) {
+  var size = _ref.size;
+
+  switch (size) {
+    case 'small':
+      return Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* css */])(_templateObject2);
+
+    case 'medium':
+      return Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* css */])(_templateObject3);
+
+    default:
+      return Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* css */])(_templateObject4);
+  }
+});
+/* harmony default export */ __webpack_exports__["a"] = (function (_ref2) {
+  var lastUpdate = _ref2.lastUpdate,
+      light = _ref2.light,
+      props = _objectWithoutProperties(_ref2, ["lastUpdate", "light"]);
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ClockWapper, _extends({
+    className: light ? 'light' : ''
+  }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 40
     }
-  }, format(new Date(lastUpdate)));
+  }), format(new Date(lastUpdate)));
 });
 
 /***/ }),
@@ -201,31 +226,40 @@ function mapDispatchToProps(dispatch) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Atoms_Clock__ = __webpack_require__("./components/Atoms/Clock/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Atoms_Counter__ = __webpack_require__("./components/Atoms/Counter/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.es.js");
 var _jsxFileName = "/Users/kato-syogo/Desktop/git/Private/practice_nextjs/components/Molecules/example.js";
 
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n"]);
 
 
 
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+var MoleculesWrapper = __WEBPACK_IMPORTED_MODULE_4_styled_components__["c" /* default */].div(_templateObject);
 
 function Examples(_ref) {
   var lastUpdate = _ref.lastUpdate,
       light = _ref.light;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MoleculesWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 11
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Atoms_Clock__["a" /* default */], {
     lastUpdate: lastUpdate,
     light: light,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 12
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Atoms_Counter__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 13
     }
   }));
 }
@@ -255,6 +289,18 @@ var actionTypes = {
   DECREMENT: 'DECREMENT',
   RESET: 'RESET'
 };
+
+/***/ }),
+
+/***/ "./constants/color.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var color = {
+  red: '#ff0000',
+  black: '#000000'
+};
+/* harmony default export */ __webpack_exports__["a"] = (color);
 
 /***/ }),
 
@@ -2560,9 +2606,9 @@ if ("development" !== 'production' && typeof isCrushed.name === 'string' && isCr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export css */
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return css; });
 /* unused harmony export keyframes */
-/* unused harmony export injectGlobal */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return injectGlobal; });
 /* unused harmony export isStyledComponent */
 /* unused harmony export consolidateStreamedStyles */
 /* unused harmony export ThemeProvider */
@@ -4872,7 +4918,7 @@ var injectGlobal = _injectGlobal(stringifyRules, css);
 var styled = _styled(StyledComponent, constructWithOptions);
 
 
-/* harmony default export */ __webpack_exports__["b"] = (styled);
+/* harmony default export */ __webpack_exports__["c"] = (styled);
 //# sourceMappingURL=styled-components.browser.es.js.map
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/process/browser.js")))

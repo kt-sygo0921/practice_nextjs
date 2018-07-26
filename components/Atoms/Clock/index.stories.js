@@ -6,7 +6,23 @@ storiesOf('Atoms Clock', module)
     .add('default',()=> {
         const props= {
             lastUpdate: 0,
-            light: ''
+            light: '',
+        }
+        return <Clock {...props}/>
+    })
+    .add('small',()=> {
+        const props= {
+            lastUpdate: 0,
+            light: '',
+            size: 'small'
+        }
+        return <Clock {...props}/>
+    })
+    .add('medium',()=> {
+        const props= {
+            lastUpdate: 0,
+            light: '',
+            size: 'medium'
         }
         return <Clock {...props}/>
     });
