@@ -4,12 +4,17 @@ import Counter from '../Atoms/Counter';
 import styled from 'styled-components';
 
 const MoleculesWrapper = styled.div`
+    
+`
+
+const Clock_style = styled(Clock)`
+    margin-left: 10px;
 `
 
 function Examples ( {lastUpdate, light}) {
     return (
         <MoleculesWrapper>
-            <Clock lastUpdate={lastUpdate} light={light}/>
+            <Clock_style lastUpdate={lastUpdate} light={light}/>
             <Counter />
         </MoleculesWrapper>
     )

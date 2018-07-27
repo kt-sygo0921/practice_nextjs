@@ -35,10 +35,12 @@ const ClockWapper = styled.div`
     }
 `
 
-export default ({lastUpdate, light, ...props}) => {
+const Clock =  ({lastUpdate, light, ...props}) => {
     return (
         <ClockWapper className={light ? 'light': ''} {...props}>
             {format(new Date(lastUpdate))}
         </ClockWapper>
     )
 }
+
+export default Clock;
