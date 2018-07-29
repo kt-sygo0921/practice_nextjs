@@ -1,8 +1,11 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import PropTypes from 'prop-types';
+
 import color from '../../../constants/color';
 import fz from '../../../constants/font-size';
 import space from '../../../constants/space';
+
 
 const Button_Style = styled.a`
     display: inline-block;
@@ -30,10 +33,18 @@ const Button_Style = styled.a`
     }
 `
 
-const Button = ({lank, ...props}) => {
+const Button = ({...props}) => {
     return (
-        <Button_Style lank={lank} {...props}/>
+        <Button_Style  {...props}/>
     )
+}
+
+Button.defaultProps = {
+    lank: ''
+}
+
+Button.propTypes = {
+    lank: PropTypes.string
 }
 
 export default Button;
