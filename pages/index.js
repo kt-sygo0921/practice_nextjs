@@ -1,14 +1,28 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {I18nextProvider} from 'react-i18next';
+import startI18 from '../lib/starti18n';
+import {getTtranslation} from '../lib/translationHelpers';
+
 import { serverRenderClock, startClock } from '../actions/action';
 import Example from '../components/Molecules/example';
 
-
+const lang = 'ja'
 class Index extends React.Component {
-    static getInitialProps({reduxStore, req}) {
+    static async getInitialProps({reduxStore, req}) {
         const isServer = !!req;
+        const translations = await getTtranslation(
+            lang,
+            ['common'],
+            'http://localhost:8888/static/locales/'
+        )
         reduxStore.dispatch(serverRenderClock(isServer))
-        return {}
+        return {translations}
+    }
+
+    constructor(props) {
+        super(props)
+        this.i18n = startI18(props.translationHelpers, lang)
     }
 
     componentDidMount() {
@@ -21,9 +35,11 @@ class Index extends React.Component {
         clearInterval(this.timer)
     }
 
-    render() {
+    render(props) {
         return(
-            <Example />
+            <I18nextProvider i18n = {this.i18n}>
+                <Example />
+            </I18nextProvider>
         )
     }
 }

@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import Clock from '../Atoms/Clock';
 import Counter from '../Atoms/Counter';
+import Baloon from '../Atoms/Baloon';
 import styled from 'styled-components';
 
 const MoleculesWrapper = styled.div`
@@ -16,6 +17,7 @@ function Examples ( {lastUpdate, light}) {
         <MoleculesWrapper>
             <Clock_style lastUpdate={lastUpdate} light={light}/>
             <Counter />
+            <Baloon />
         </MoleculesWrapper>
     )
 }

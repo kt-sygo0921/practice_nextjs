@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {translate} from 'react-i18next';
 
 const BaloonStyled = styled.span`
     background-color: #1a1a1a;
@@ -25,7 +26,8 @@ const BaloonStyled = styled.span`
 `
 
 const Baloon = props => (
-    <BaloonStyled {...props} />
+    translate(['common'])((props) => (<BaloonStyled {...props}>{props.t('hello')}</BaloonStyled>))
+    
 )
 
 export default  Baloon;
