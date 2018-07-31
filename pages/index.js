@@ -41,4 +41,5 @@ function mapDispatchToProps(dispatch) {
             dispatch(startClock())
         }
     }
-}export default connect(mapStateToProps,mapDispatchToProps)(Index)
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Index)

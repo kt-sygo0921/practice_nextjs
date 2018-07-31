@@ -9,7 +9,7 @@
     "dev": "next -p 8888",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -p 6006 -c .storybook",
+    "storybook": "start-storybook -p 6006 -c .storybook -s ./assets",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
