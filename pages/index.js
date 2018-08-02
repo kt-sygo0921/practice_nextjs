@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { serverRenderClock, startClock } from '../actions/action';
 import Example from '../components/Molecules/example';
+import {withI18next} from '../lib/withI18next';
 
 
 class Index extends React.Component {
@@ -23,7 +24,9 @@ class Index extends React.Component {
 
     render() {
         return(
-            <Example />
+            withI18next(['common'])(({t,initialI18nStore})) => (
+                <Example />
+            )
         )
     }
 }

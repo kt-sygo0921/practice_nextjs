@@ -1,6 +1,8 @@
 const i18next = require('i18next');
 const XHR = require('i18next-xhr-backend');
 const LanguageDetector = require('i18next-browser-languagedetector');
+const reactI18nextModule = require('react-i18next');
+
 
 const options = {
     fallbackLng = 'en',
@@ -22,12 +24,13 @@ const options = {
     }
 }
 
-const i18nInstance - i18next;
+const i18nInstance = i18next;
 
 if(process.browser) {
     i18nInstance
         .use(XHR)
         .use(LanguageDetector)
+        .use(reactI18nextModule)
 }
 
 if(!i18nInstance.isInitialized) i18nInstance.init(options)
@@ -56,5 +59,5 @@ const getInitialProps = (req, namespaces) => {
 module.exports = {
     getInitialProps,
     i18nInstance,
-    i18n: i18next.default
+    I18n: i18next.default
 }

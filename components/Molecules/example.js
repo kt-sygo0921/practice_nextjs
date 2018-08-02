@@ -14,8 +14,7 @@ const Clock_style = styled(Clock)`
 function Examples ( {lastUpdate, light}) {
     return (
         <MoleculesWrapper>
-            <Clock_style lastUpdate={lastUpdate} light={light}/>
-            <Counter />
+            <p>{t('common:integrates_react-i18next')}</p>
         </MoleculesWrapper>
     )
 }
