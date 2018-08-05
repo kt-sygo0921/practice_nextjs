@@ -5,13 +5,14 @@ const reactI18nextModule = require('react-i18next');
 
 
 const options = {
-    fallbackLng = 'en',
+    fallbackLng: 'en',
     load: 'languageOnly',
 
     ns:['common'],
     defaultNS: 'common',
 
-    debug: process.env.NODE_ENV !== 'production',
+    // debug: process.env.NODE_ENV !== 'production',
+    debug: false,
     saveMissing: true,
 
     interpolation: {
@@ -45,7 +46,7 @@ const getInitialProps = (req, namespaces) => {
     req.i18n.languages.forEach((l) => {
         initialI18nStore[l] = {}
         namespaces.forEach((ns) => {
-            initialI18nStore[l][ns] = (req.i18n.services.resourceStore.data[i] || {})[ns] || {}
+            initialI18nStore[l][ns] = (req.i18n.services.resourceStore.data[l] || {})[ns] || {}
         })
     })
 
