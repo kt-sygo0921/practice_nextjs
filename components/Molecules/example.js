@@ -12,13 +12,11 @@ const Clock_style = styled(Clock)`
     margin-left: 10px;
 `
 
-function Examples ({lastUpdate, light, t}) {
-    return (
-        <MoleculesWrapper>
-            <p>{t('integrates_react-i18next')}</p>
-        </MoleculesWrapper>
-    )
-}
+const Examples = ({lastUpdate, light, t}) => (
+    <MoleculesWrapper>
+        <p>あああああ</p>
+    </MoleculesWrapper>
+)
 
 function mapStateToProps(state) {
     const {lastUpdate, light} = state.reducer;
