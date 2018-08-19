@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import Clock from '../Atoms/Clock';
+import Radio from '../Atoms/Radio';
 import Counter from '../Atoms/Counter';
 import styled from 'styled-components';
 
@@ -14,8 +15,8 @@ const Clock_style = styled(Clock)`
 function Examples ( {lastUpdate, light}) {
     return (
         <MoleculesWrapper>
-            <Clock_style lastUpdate={lastUpdate} light={light}/>
             <Counter />
+            <Radio>あああああ</Radio>
         </MoleculesWrapper>
     )
 }
