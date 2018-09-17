@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
         return(
             <html>
                 <Head>
+                    <link rel="stylesheet" href="/static/lib/css/slick.css" />
                     <title>My page</title>
                     {this.props.styleTags}
                 </Head>
