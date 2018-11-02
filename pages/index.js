@@ -1,30 +1,27 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { serverRenderClock, startClock } from '../actions/action';
+import {serverRenderClock, startClock} from '../actions/action';
 import Example from '../components/Molecules/example';
-
 
 class Index extends React.Component {
     static getInitialProps({reduxStore, req}) {
         const isServer = !!req;
-        reduxStore.dispatch(serverRenderClock(isServer))
-        return {}
+        reduxStore.dispatch(serverRenderClock(isServer));
+        return {};
     }
 
     componentDidMount() {
-        this.timer = setInterval((()=>{
+        this.timer = setInterval(() => {
             this.props.startClock();
-        }),1000)
+        }, 1000);
     }
 
     componentWillUnmount() {
-        clearInterval(this.timer)
+        clearInterval(this.timer);
     }
 
     render() {
-        return(
-            <Example />
-        )
+        return <Example />;
     }
 }
 
@@ -35,11 +32,14 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         serverRenderClock() {
-            dispatch(serverRenderClock())
+            dispatch(serverRenderClock());
         },
         startClock() {
-            dispatch(startClock())
-        }
-    }
+            dispatch(startClock());
+        },
+    };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Index)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Index);

@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006 -c .storybook -s ./assets",
+    "fix": "prettier-eslint --write pages/**/*.js components/**/*.js lib/**/*.js, store/**/*.js actions/**/*.js reducers/**/*.js",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -45,6 +46,16 @@
     "@storybook/addons": "^3.4.8",
     "@storybook/react": "^3.4.8",
     "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "lint-staged": "^7.2.0",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1"
   }
 }
